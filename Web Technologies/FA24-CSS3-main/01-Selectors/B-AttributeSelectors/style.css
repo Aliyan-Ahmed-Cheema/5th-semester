@@ -1,0 +1,14 @@
+/* Attribute Selectors */
+
+[class] {
+  color: crimson;
+}
+
+[class="subheadings"] {
+  /* just like: .subheading */
+  color: cadetblue;
+}
+
+[class^="sub"] {
+  color: blueviolet;
+}

@@ -1,0 +1,21 @@
+.First_heading{
+    color: green;
+    font-weight: lighter;
+}
+.Register{
+    background-color: green;
+    color: white;
+    width: 13rem;
+    font-size: 1.3em;
+}
+.Change{
+    color: green;
+    margin-left: 2.5rem;
+}
+.Activation{
+    color: green;
+}
+.Support{
+    color: green;
+    font-weight: lighter;
+}

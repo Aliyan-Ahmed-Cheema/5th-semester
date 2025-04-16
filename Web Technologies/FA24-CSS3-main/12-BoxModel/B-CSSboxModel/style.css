@@ -1,0 +1,124 @@
+body {
+  background-color: antiquewhite;
+}
+
+.thisisdiv {
+  background-color: turquoise;
+}
+
+.div2 {
+  background-color: rgb(80, 133, 135);
+}
+
+.div3 {
+  background-color: rgb(26, 157, 239);
+}
+
+h1 {
+  background-color: plum;
+}
+
+/* ------------------------- */
+h1,
+.thisisdiv {
+  width: 500px;
+}
+
+/* -------------- PROBLEM ----------------- */
+.thisisdiv {
+  border-left: navy solid 10px;
+  border-right: navy solid 10px;
+  border-bottom: ridge gray 10px;
+}
+
+.div2 {
+  border-left-color: orange;
+  border-right-color: orange;
+}
+
+.div3 {
+  border-left-color: green;
+  border-right-color: green;
+}
+
+/* After adding borders, overall width of h1 differs from overall width of div elements because default value of box-sizing property is content-box */
+
+/* -------------- PROBLEM ----------------- */
+/* With the following CSS Rules, scroll may appear due to margin and/or padding and/or border because default value of box-sizing property is content-box */
+.div1 {
+  /* --- 100% WIDTH PROBLEM --- */
+  /* When width is set to 100% */
+  width: 100%; /* auto [DEFAULT]*/
+
+  /* OR */
+  /* --- EXTRA PADDING PROBLEM --- */
+  /* padding: 0 20px; */
+  /* vs.  */
+  padding: 0 200px;
+  /* Padding value where x-axis scrol appears
+    which is mostly undesireable*/
+
+  /* OR */
+  /* --- EXTRA BORDER PROBLEM --- */
+  /* When adding borders*/
+
+  /* OR */
+  /* --- EXTRA MARGIN PROBLEM --- */
+  /* margin: 0 200px; */
+}
+
+/* --------------- REASON ---------------- */
+* {
+  /* Default Settings */
+  box-sizing: content-box;
+}
+
+/* --------------- REMEDY EXTRA PADDING or BORDER --- */
+* {
+  /* --- SOLUTION to EXTRA PADDING or BORDER PROBLEM --- */
+  /* Override Settings */
+  box-sizing: border-box;
+}
+
+/* --------------- NOW ------------------- */
+.div1 {
+  /* Solved */
+  padding: 0 200px;
+}
+
+/* [====LOGIC-PROBLEM-START====] */
+/* --------------- REMEDY EXTRA PADDING or MARGIN ---------------- */
+/* NOTE:
+    box-sizing: padding-box; OR box-sizing: margin-box;
+    do not work correctly on chrome
+*/
+/* * { */
+/* --- SOLUTION to EXTRA PADDING or BORDER PROBLEM --- */
+/* Override Settings */
+/* box-sizing: margin-box; */
+/* OR */
+/* box-sizing: padding-box; */
+/* } */
+
+/* --------------- NOW ------------------- */
+/* .div2 { */
+/* margin-left: 10px; */
+/* } */
+/* [====LOGIC-PROBLEM-END====] */
+
+/* --------------- Centring the Element --- */
+h1 {
+  /* width: 500px; */
+  /* vs. */
+  /* width: 200px; */
+
+  /* margin: 20px; */
+  /* vs.  */
+  margin: 0 auto;
+}
+
+.thisisdiv {
+  /* margin: 10px; */
+  /* vs. */
+  margin: 10px auto;
+}

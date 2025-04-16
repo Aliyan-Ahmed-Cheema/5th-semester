@@ -1,0 +1,133 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  /* override defaults */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thisisdiv {
+  border-bottom: ridge gray 10px;
+  border-left: navy solid 10px;
+  border-right: navy solid 10px;
+  /* border-top: navy 10px; */
+  background-color: rgb(73, 168, 241);
+}
+
+.div2 {
+  border-left-color: orange;
+  border-right-color: orange;
+  background-color: rgb(128, 97, 40);
+}
+
+.div3 {
+  border-left-color: green;
+  border-right-color: green;
+  background-color: rgb(5, 236, 48);
+}
+
+.div4 {
+  border-left-color: rgba(234, 10, 10, 0.8);
+  border-right-color: rgba(234, 10, 10, 0.8);
+  background-color: rgba(244, 96, 96, 0.759);
+}
+
+/* ======================================== */
+/* ========  Some display options  ======== */
+/* ======================================== */
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  display: block;
+  display: none;
+  display: contents;
+  display: inline-block;
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  display: inline-block;
+  width: min-content;
+  /* width: 10%; */
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  display: inline-block;
+  width: max-content;
+}
+
+/* [PROBLEM] NOT FLEXIBLE */
+
+/* + [Restore Defaults] + */
+.div1,
+.div2,
+.div3,
+.div4 {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+/* ======================================== */
+/* =====  CSS Flex(ible) (Box) Layout  ==== */
+/* ======================================== */
+
+/* ---------- flex container ----------*/
+.maindiv {
+  display: flex;
+}
+
+/* ---------- flex container's
+              width and height --------*/
+.maindiv {
+  width: max-content;
+  width: min-content;
+  width: 50%;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  width: auto;
+}
+
+/* ---------- flex container's
+                 direction ------------*/
+.maindiv {
+  flex-direction: column;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  flex-direction: row;
+}
+
+/* ---------- flex container's
+                 wrapping ------------*/
+.maindiv {
+  flex-wrap: wrap;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  flex-wrap: nowrap;
+}
+
+/* ---------- shorthand property -----*/
+.maindiv {
+  flex-flow: row wrap;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  flex-flow: row nowrap;
+}

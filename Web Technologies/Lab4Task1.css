@@ -1,0 +1,163 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "image image"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+    padding: 10px;
+    border-bottom: 5px solid blue;
+}
+
+nav {
+    grid-area: nav;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.featuredimage {
+    grid-area: image;
+}
+
+.featuredimage img {
+    width: 100%;
+    border: 5px solid blue;
+}
+
+main {
+    grid-area: main;
+    background-color: lightgreen;
+    padding: 10px;
+    border: 5px solid blue;
+}
+
+aside.sideway {
+    grid-area: aside;
+    background-color: lightblue;
+    padding: 10px;
+    border: 5px solid blue;
+}
+
+aside.sideway div {
+    margin-bottom: 20px;
+}
+
+aside.sideway img {
+    width: 100%;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightblue;
+    padding: 10px;
+    border-top: 5px solid blue;
+    text-align: center;
+}
+
+aside.sidewayoptional {
+    display: none; /* Hidden for now */
+}
+
+/* Form styling inside main */
+.orderSection form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.orderSection form label {
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.orderSection form input, 
+.orderSection form select, 
+.orderSection form textarea {
+    grid-column: 2 / 3;
+    padding: 5px;
+}
+
+/* Responsive Design */
+
+/* Medium Viewport: Between 500px and 1000px */
+@media (max-width: 1000px) {
+    .container {
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "image image"
+            "main main"
+            "aside aside"
+            "footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    aside.sidewayoptional {
+        display: block;
+        grid-area: aside;
+        background-color: lightgray;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* Small Viewport: Less than 500px */
+@media (max-width: 500px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "image"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}

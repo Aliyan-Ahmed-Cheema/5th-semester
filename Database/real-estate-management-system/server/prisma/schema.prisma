@@ -1,0 +1,96 @@
+generator client { 
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id                String        @id @default(cuid())
+  firstName         String
+  lastName          String
+  email             String        @unique
+  password          String
+  role              Role          @default(CLIENT)
+  listings          Listing[]     @relation("UserListings")     
+  agreements        Agreement[]   @relation("UserAgreements")    
+  clientAgreements  Agreement[]   @relation("ClientAgreements") 
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+}
+
+model Listing {
+  id                String        @id @default(cuid())
+  propertyName      String
+  description       String
+  price             Float
+  listingType       ListingType
+  propertyType      PropertyType
+  address           String
+  city              String
+  state             State
+  postalCode        String
+  bedrooms          Int
+  bathrooms         Int
+  area              Float
+  contactNumber     String
+  dealerId          String
+  dealer            User          @relation("UserListings", fields: [dealerId], references: [id], onDelete: Cascade)
+  interestedClients String[]       
+  agreements        Agreement[]   @relation("ListingAgreements")  
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+}
+
+model Agreement {
+  id             String          @id @default(cuid())
+  dealerId       String
+  clientId       String
+  propertyId     String
+  agreementType  AgreementType
+  price          Float?
+  rentAmount     Float?
+  duration       String?
+  leaseAmount    Float?
+  leaseTerms     String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  dealer         User            @relation("UserAgreements", fields: [dealerId], references: [id], onDelete: Cascade)
+  client         User            @relation("ClientAgreements", fields: [clientId], references: [id], onDelete: Cascade)
+  property       Listing         @relation("ListingAgreements", fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  ADMIN
+  DEALER
+  CLIENT
+}
+
+enum ListingType {
+  SALE
+  RENT
+}
+
+enum PropertyType {
+  HOUSE
+  APARTMENT
+  LAND
+  COMMERCIAL
+}
+
+enum State {
+  PUNJAB
+  SINDH
+  BALOCHISTAN
+  KHYBER
+}
+
+enum AgreementType {
+  SALE
+  RENT
+  LEASE
+}

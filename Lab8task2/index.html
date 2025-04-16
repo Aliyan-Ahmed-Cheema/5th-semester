@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .item-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .item-container span {
+            flex-grow: 1;
+            padding: 0 10px;
+        }
+        h3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        h4 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .border-end {
+            border-right: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center bg-danger text-white p-3 mb-4">
+            <h1>My Shopping Today</h1>
+        </div>
+
+        <!-- New Item Form -->
+        <div class="mb-4 p-3 bg-success text-white">
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <input type="text" id="itemName" class="form-control" placeholder="Enter item name">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <select id="category" class="form-select">
+                        <option value="grocery">Grocery</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="health">Health</option>
+                    </select>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <button id="addItem" class="btn btn-warning w-100">Add Item</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopping Lists -->
+        <div id="shoppingLists" class="shopping-lists">
+            <h3>Shopping Lists</h3>
+
+            <!-- Grocery List -->
+            <div id="grocery" class="list-category mb-4">
+                <h4 class="bg-primary text-white p-2">Grocery List</h4>
+                <div class="row">
+                    <div id="groceryPending" class="col-6 border-end p-3">
+                        <h5>Pending</h5>
+                    </div>
+                    <div id="groceryCompleted" class="col-6 p-3">
+                        <h5>Completed</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronics List -->
+            <div id="electronics" class="list-category mb-4">
+                <h4 class="bg-secondary text-white p-2">Electronics List</h4>
+                <div class="row">
+                    <div id="electronicsPending" class="col-6 border-end p-3">
+                        <h5>Pending</h5>
+                    </div>
+                    <div id="electronicsCompleted" class="col-6 p-3">
+                        <h5>Completed</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kitchen List -->
+            <div id="kitchen" class="list-category mb-4">
+                <h4 class="bg-warning text-white p-2">Kitchen List</h4>
+                <div class="row">
+                    <div id="kitchenPending" class="col-6 border-end p-3">
+                        <h5>Pending</h5>
+                    </div>
+                    <div id="kitchenCompleted" class="col-6 p-3">
+                        <h5>Completed</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health List -->
+            <div id="health" class="list-category mb-4">
+                <h4 class="bg-info text-white p-2">Health List</h4>
+                <div class="row">
+                    <div id="healthPending" class="col-6 border-end p-3">
+                        <h5>Pending</h5>
+                    </div>
+                    <div id="healthCompleted" class="col-6 p-3">
+                        <h5>Completed</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Select elements
+        const addItemBtn = document.getElementById('addItem');
+        const itemNameInput = document.getElementById('itemName');
+        const categorySelect = document.getElementById('category');
+
+        // Add item functionality
+        addItemBtn.addEventListener('click', () => {
+            const itemName = itemNameInput.value.trim();
+            const category = categorySelect.value;
+
+            if (!itemName) {
+                alert('Please enter an item name.');
+                return;
+            }
+
+            // Identify the "Pending" section for the selected category
+            const pendingSection = document.getElementById(`${category.toLowerCase()}Pending`);
+
+            // Create new item container
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item-container');
+
+            // Add item content
+            itemDiv.innerHTML = `
+                <span>${itemName}</span>
+                <div>
+                    <button class="btn btn-success btn-sm complete-btn">✔</button>
+                    <button class="btn btn-danger btn-sm delete-btn">X</button>
+                </div>
+            `;
+
+            // Add event listeners for buttons
+            const completeBtn = itemDiv.querySelector('.complete-btn');
+            const deleteBtn = itemDiv.querySelector('.delete-btn');
+
+            // Mark as complete (move to Completed section)
+            completeBtn.addEventListener('click', () => moveToCompleted(itemDiv, category));
+
+            // Delete the item
+            deleteBtn.addEventListener('click', () => itemDiv.remove());
+
+            // Add the item to the Pending section
+            pendingSection.appendChild(itemDiv);
+
+            // Clear input field
+            itemNameInput.value = '';
+        });
+
+        // Move item to the "Completed" section
+        function moveToCompleted(itemDiv, category) {
+            const completedSection = document.getElementById(`${category.toLowerCase()}Completed`);
+
+            // Update buttons for "Completed" item
+            itemDiv.querySelector('.complete-btn').remove(); // Remove the check button
+
+            // Add "Undo" button
+            const undoBtn = document.createElement('button');
+            undoBtn.classList.add('btn', 'btn-warning', 'btn-sm', 'undo-btn');
+            undoBtn.textContent = '↩';
+
+            undoBtn.addEventListener('click', () => moveToPending(itemDiv, category));
+
+            // Replace buttons with Undo and Delete
+            const buttonContainer = itemDiv.querySelector('div:last-child');
+            buttonContainer.appendChild(undoBtn);
+
+            // Move the item to the Completed section
+            completedSection.appendChild(itemDiv);
+        }
+
+        // Move item back to the "Pending" section
+        function moveToPending(itemDiv, category) {
+            const pendingSection = document.getElementById(`${category.toLowerCase()}Pending`);
+
+            // Remove the Undo button
+            itemDiv.querySelector('.undo-btn').remove();
+
+            // Add "Check" button back
+            const checkBtn = document.createElement('button');
+            checkBtn.classList.add('btn', 'btn-success', 'btn-sm', 'complete-btn');
+            checkBtn.textContent = '✔';
+
+            checkBtn.addEventListener('click', () => moveToCompleted(itemDiv, category));
+
+            // Replace buttons with Check and Delete
+            const buttonContainer = itemDiv.querySelector('div:last-child');
+            buttonContainer.prepend(checkBtn);
+
+            // Move the item back to the Pending section
+            pendingSection.appendChild(itemDiv);
+        }
+    </script>
+</body>
+</html>

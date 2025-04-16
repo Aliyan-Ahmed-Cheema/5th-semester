@@ -1,0 +1,246 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  /* override defaults */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thisisdiv {
+  border-bottom: ridge gray 10px;
+  border-left: navy solid 10px;
+  border-right: navy solid 10px;
+  /* border-top: navy 10px; */
+  background-color: rgb(73, 168, 241);
+}
+
+.div2 {
+  border-left-color: orange;
+  border-right-color: orange;
+  background-color: rgb(128, 97, 40);
+}
+
+.div3 {
+  border-left-color: green;
+  border-right-color: green;
+  background-color: rgb(5, 236, 48);
+}
+
+.div4 {
+  border-left-color: rgba(234, 10, 10, 0.8);
+  border-right-color: rgba(234, 10, 10, 0.8);
+  background-color: rgba(244, 96, 96, 0.759);
+}
+
+/* ======================================== */
+/* =====  CSS Flex(ible) (Box) Layout  ==== */
+/* ======================================== */
+
+.maindiv {
+  display: flex;
+}
+
+/* ------------- flex-shrink -------------*/
+/* - Distribution of negative free space -*/
+/* ---------------------------------------*/
+.thisisdiv {
+  flex-shrink: 0;
+
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+.div1,
+.div2 {
+  flex-shrink: 0;
+}
+
+.div3,
+.div4 {
+  flex-shrink: 1;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+.div1,
+.div2 {
+  flex-shrink: 1;
+}
+
+.div3,
+.div4 {
+  flex-shrink: 0;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+.div1,
+.div2 {
+  flex-shrink: 1;
+}
+
+.div3,
+.div4 {
+  flex-shrink: 2;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+.div1,
+.div2 {
+  flex-shrink: 2;
+}
+
+.div3,
+.div4 {
+  flex-shrink: 1;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+.div1 {
+  flex-shrink: 0.2;
+}
+
+.div2 {
+  flex-shrink: 0.2;
+}
+
+.div3 {
+  flex-shrink: 0.4;
+}
+
+.div4 {
+  flex-shrink: 0.8;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+.thisisdiv {
+  height: 50vh;
+}
+
+.thisisdiv {
+  flex-shrink: 0;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  height: auto;
+  flex-shrink: 1;
+}
+
+/* ---------------------------------------*/
+/* ---- Impact of flex item's width ------*/
+/* ---------------------------------------*/
+
+/* Flexibility Void */
+.thisisdiv {
+  width: 50px;
+  width: 50vw;
+  width: 25%;
+
+  /* 100/4 = 25% max; Dimension NOT limited to flex container's boundary along main axis DUE TO shrink disabling AND no-wrapping*/
+  width: 50%;
+  width: 100%;
+  width: 4000px;
+
+  /* Dimension unlimited along cross axis */
+  /* height: 200vh; */
+}
+
+.maindiv {
+  width: 100vw;
+  width: 100%;
+  width: 200%;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  width: auto;
+  height: auto;
+  flex-shrink: 1;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  width: auto;
+  height: auto;
+}
+
+/* ---------------------------------------*/
+/* ---- Impact of flex container's
+            Direction -----*/
+/* ---------------------------------------*/
+.maindiv {
+  flex-direction: column;
+}
+
+.div1,
+.div2 {
+  flex-shrink: 1;
+}
+
+.div3,
+.div4 {
+  flex-shrink: 0;
+}
+
+.maindiv {
+  height: 100vh;
+}
+
+/* ---------------------------------------*/
+/* ---- Impact of flex item's height -----*/
+/* ---------------------------------------*/
+.thisisdiv {
+  /* 100/4 = 25% max; Dimension NOT limited to flex container's boundary along main axis DUE TO shrink disabling AND no-wrapping*/
+  height: 50vh;
+
+  /* Dimension unlimited along cross axis */
+  /* width: 200vw; */
+}
+
+.maindiv {
+  height: 100vh;
+  height: 100%;
+  height: 200%;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-grow: 0;
+  width: auto;
+  height: auto;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  width: auto;
+  height: auto;
+}

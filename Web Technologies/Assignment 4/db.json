@@ -1,0 +1,44 @@
+{
+  "shoppingList": [
+    {
+      "id": "1",
+      "title": "Potato peeler",
+      "status": "seek",
+      "category": "kitchen",
+      "trash": false,
+      "createDate": "2024-12-24"
+    },
+    {
+      "id": "2",
+      "title": "Sugar",
+      "status": "seek",
+      "category": "grocery",
+      "trash": false,
+      "createDate": "2024-12-24"
+    },
+    {
+      "id": "c853",
+      "title": "orange",
+      "status": "mark",
+      "category": "grocery",
+      "trash": false,
+      "createDate": "2024-12-24"
+    },
+    {
+      "id": "25ac",
+      "title": "Panadol",
+      "status": "seek",
+      "category": "health",
+      "trash": false,
+      "createDate": "2024-12-24"
+    },
+    {
+      "id": "ecf6",
+      "title": "toaster",
+      "status": "seek",
+      "category": "electronics",
+      "trash": false,
+      "createDate": "2024-12-24"
+    }
+  ]
+}

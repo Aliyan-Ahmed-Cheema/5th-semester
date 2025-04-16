@@ -1,0 +1,57 @@
+body{
+    background-color: grey;
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    top: 100px;
+}
+
+h2 {
+    background-color: darkblue;
+    color: white;
+    font-size: xx-large;
+    margin-left: 450px;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+p {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+}

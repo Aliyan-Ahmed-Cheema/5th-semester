@@ -1,0 +1,182 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  /* override defaults */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thisisdiv {
+  border-bottom: ridge gray 10px;
+  border-left: navy solid 10px;
+  border-right: navy solid 10px;
+  /* border-top: navy 10px; */
+  background-color: rgb(73, 168, 241);
+}
+
+.div2 {
+  border-left-color: orange;
+  border-right-color: orange;
+  background-color: rgb(128, 97, 40);
+}
+
+.div3 {
+  border-left-color: green;
+  border-right-color: green;
+  background-color: rgb(5, 236, 48);
+}
+
+.div4 {
+  border-left-color: rgba(234, 10, 10, 0.8);
+  border-right-color: rgba(234, 10, 10, 0.8);
+  background-color: rgba(244, 96, 96, 0.759);
+}
+
+/* ======================================== */
+/* =====  CSS Flex(ible) (Box) Layout  ==== */
+/* ======================================== */
+
+.maindiv {
+  display: flex;
+}
+
+/* ------------- flex-basis --------------*/
+
+.maindiv {
+  flex-basis: min-content;
+  flex-basis: max-content;
+  flex-basis: 50%;
+  /* flex-basis property has NO IMPACT on Flex Container */
+}
+
+/* flex-basis property is used on Flex Items */
+.thisisdiv {
+  flex-basis: max-content;
+  flex-basis: min-content;
+  flex-basis: fit-content;
+  flex-basis: 200px;
+}
+
+/* flex-basis property with non auto value overrides main axis dimension i.e. width or height  */
+.thisisdiv {
+  width: 1000px;
+}
+
+.thisisdiv {
+  height: 150px;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-basis: auto;
+  width: auto;
+  height: auto;
+}
+
+/* ------------- flex-shrink -------------*/
+.div2,
+.div4 {
+  width: max-content;
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+.div2,
+.div4 {
+  /* + [Restore Defaults] + */
+  flex-basis: auto;
+  flex-shrink: 1;
+}
+
+/* -------------------------------------*/
+.div1,
+.div3 {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+.div1,
+.div3 {
+  /* + [Restore Defaults] + */
+  flex-basis: auto;
+  flex-shrink: 1;
+}
+
+/* ------------- flex-wrap -------------*/
+/* 100/4 = 25% max; Dimension limited to flex container's boundary along main axis DUE TO default shrink enabling AND no-wrapping*/
+.thisisdiv {
+  flex-basis: 50%;
+}
+
+.maindiv {
+  flex-wrap: wrap;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-basis: auto;
+}
+
+.maindiv {
+  /* + [Restore Defaults] + */
+  flex-wrap: nowrap;
+}
+/* ------------- flex-direction -------------*/
+.div2,
+.div3 {
+  /* width: 500px; */
+  /* vs. */
+  flex-basis: 250px;
+
+  /* FLIXIBLE */
+
+  /* + [Restore Defaults] + */
+  width: auto;
+  flex-basis: auto;
+}
+
+.maindiv {
+  flex-direction: column;
+
+  /* + [Restore Defaults] + */
+  flex-direction: row;
+}
+
+/* ------------- flex-flow (shorthand) -------------*/
+.maindiv {
+  flex-flow: row wrap;
+
+  /* + [Restore Defaults] + */
+  flex-flow: row nowrap;
+}
+
+/* ------------- flex-grow -------------*/
+.thisisdiv {
+  /* flex-basis: 25%; */
+  flex-basis: 100px;
+}
+
+.div1 {
+  flex-grow: 0;
+}
+
+.div2 {
+  flex-grow: 1;
+}
+
+.div3 {
+  flex-grow: 2;
+}
+
+.div4 {
+  flex-grow: 2;
+}
+
+.thisisdiv {
+  /* + [Restore Defaults] + */
+  flex-basis: auto;
+  flex-grow: 0;
+}

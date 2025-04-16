@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Famous Restaurant</title>
+</head>
+<body>
+    <h1>The Famous Restaurant</h1>
+
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Menus</a></li>
+        <li><a href="">Deals</a></li>
+        <li><a href="">Place order</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <img src="biryani.jpg" alt="Biryani Image" width="300">
+
+    <h2>Place Order</h2>
+
+    <form>
+        <label>Dish:</label>
+        <select id="dish">
+            <option>Chicken Biryani</option>
+            <option>Mutton Biryani</option>
+            <option>Beef Biryani</option>
+        </select>
+        <br><br>
+
+        <label>Number of servings:</label>
+        <input type="number">
+        <br><br>
+
+        <label>First Name:</label>
+        <input type="text">
+        <br><br>
+
+        <label>Last Name:</label>
+        <input type="text">
+        <br><br>
+
+        <label>Delivery Date and Time:</label>
+        <input type="datetime-local">
+        <br><br>
+
+        <label>Additional Instructions:</label><br>
+        <textarea id="instructions" rows="4" cols="50" placeholder="Please add additional instructions on your order here..."></textarea>
+        <br><br>
+
+        <label>Are you interested to subscribe us for latest deals?</label>
+        <input type="checkbox">
+        <br><br>
+
+        <label>Are you sure, you want to place the order?</label>
+        <input type="checkbox">
+        <br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>

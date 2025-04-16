@@ -1,0 +1,299 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  /* override defaults */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 150%;
+  background-color: darkslateblue;
+}
+
+/* html {
+  height: 100%;
+}
+
+body {
+  height: 150%;
+  background-color: darkslateblue;
+} */
+
+.thisisdiv {
+  border-bottom: ridge gray 10px;
+  border-left: navy solid 10px;
+  border-right: navy solid 10px;
+  border-top: navy 10px;
+  background-color: rgb(73, 168, 241);
+}
+
+.div2 {
+  border-left-color: orange;
+  border-right-color: orange;
+  background-color: rgb(128, 97, 40);
+}
+
+.div3 {
+  border-left-color: green;
+  border-right-color: green;
+  background-color: rgb(5, 236, 48);
+}
+
+.div4 {
+  border-left-color: rgba(234, 10, 10, 0.8);
+  border-right-color: rgba(234, 10, 10, 0.8);
+  background-color: rgba(244, 96, 96, 0.759);
+}
+
+/* ------------------------- */
+.thisisdiv {
+  width: 200px;
+  height: 100px;
+}
+
+/* ======================================== */
+/* =======  Positioned Elements  ========== */
+/* ======================================== */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 150%;
+  background-color: rgb(152, 152, 134);
+}
+
+.maindiv {
+  width: 80%;
+  height: 90%;
+  background-color: wheat;
+  margin: 10px auto;
+}
+
+.divexternal {
+  width: 100%;
+  height: 100%;
+}
+
+/* [Default i.e. Normal Flow] */
+.thisisdiv {
+  position: static;
+}
+
+.div3 {
+  margin: 0 auto;
+}
+
+.div3 {
+  margin: 0;
+}
+
+/* =======  Relative Positioned  ========== */
+
+/* Positioned relative to (i.e., offset from) its normal position  */
+
+.div3 {
+  position: relative;
+}
+
+.div3 {
+  position: relative;
+  top: 20px;
+  /* top: 50%; */
+  left: 50%;
+}
+
+/* ------------------------------- */
+.div3 {
+  margin: 0 auto;
+}
+
+.div3 {
+  margin: 0;
+}
+
+/* =======  Absolute Positioned  ========== */
+
+/* Positioned relative to (i.e., offset from) its nearest ancestor which is EITHER a positioned element OR an element with some special cases.  */
+
+.div1 {
+  position: absolute;
+}
+
+.div1 {
+  position: absolute;
+  /* display: none; */
+  /* opacity: 0; */
+  /* opacity: 50%; */
+  /* visibility: hidden; */
+}
+
+/* ------------------------------- */
+/* Positioned relative to parent - if default[auto] offset values */
+.div1 {
+  top: auto;
+  right: auto;
+}
+
+/* ------------------------------- */
+/* Positioned relative to nearest ancesstor having porition set not to static - if non-default offset values */
+.div1 {
+  top: 0;
+  right: 0;
+}
+
+body {
+  position: relative;
+}
+
+/* ------------------------------- */
+/* Positioned relative to nearest ancesstor having porition set not to static - if non-default offset values */
+.div1 {
+  top: 0;
+  right: 0;
+}
+
+.maindiv {
+  position: relative;
+}
+
+/* =======  Fixed Positioned  ============= */
+
+/* Positioned relative to (i.e., offset from) viewable area of viewport (i.e., viewable area of ICB)OR an element with some special cases. */
+
+.div2 {
+  position: fixed;
+}
+
+.div2 {
+  position: fixed;
+  /* display: none; */
+  /* opacity: 0; */
+  /* bottom: 50%; */
+}
+
+/* ------------------------------- */
+.div2 {
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+}
+
+.div2 {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 50%;
+}
+
+/* ------------------------------- */
+
+.div2 {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 50%;
+  transform: translateX(+50%);
+  /* or */
+  /* right: 38%; */
+}
+
+/* ------------------------------- */
+/* Reset to default */
+.div2 {
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  transform: none;
+}
+
+/* ------------------------------- */
+.div2 {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+/* =======  Sticky Positioned  ============ */
+
+/* Positioned relative to (i.e., offset from) viewable area of viewport (i.e., viewable area of ICB)OR an element with some special cases. */
+
+.div4 {
+  position: sticky;
+}
+
+.div4 {
+  position: sticky;
+
+  /* Fixed Behaviour: Sticking Criteria i.e., threshold */
+  top: 20px;
+}
+
+/* .div4 {
+  top: 50%;
+} */
+
+/* ===================================================== */
+/* =======  width:auto with both left and right  ======= */
+/* ===================================================== */
+/* .div1 {
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+.div2 {
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+/* .div3 {
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+.div4 {
+  width: auto;
+  left: 0;
+  right: 0;
+}
+*/
+
+/* ===================================================== */
+/* =======  height:auto with both top and bottom  ====== */
+/* For absolutely positioned elements (absolute & fixed) */
+/* ===================================================== */
+
+/* .div1 {
+  height: auto;
+  top: 0;
+  bottom: 0;
+} */
+
+/* 
+.div2 {
+  height: auto;
+  top: 0;
+  bottom: 0;
+} */
+
+/* .div3 {
+    height: auto;
+    top: 0;
+    bottom: 0;
+} */
+
+/* .div4 {
+    height: auto;
+    top: 0;
+    bottom: 0;
+} */

@@ -1,0 +1,82 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tomato;
+}
+
+body > * {
+  border: solid blue 4px;
+  background-color: aliceblue;
+  height: 5rem;
+}
+
+/* ======================================== */
+/* ==========  Grid Layout  =============== */
+/* ======================================== */
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 10px 3fr 3fr 2fr 10px;
+}
+
+header,
+footer {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: aquamarine;
+}
+
+nav,
+.featured {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: chartreuse;
+}
+
+main {
+  grid-column: 2 / 4;
+  background-color: deepskyblue;
+}
+
+aside {
+  grid-column: 4;
+  grid-row-start: 2;
+  grid-row-end: span 3;
+}
+
+/* =======================================*/
+/* =======================================*/
+body {
+  padding: 10px;
+}
+
+body > * {
+  text-align: center;
+}
+
+/* ---------------------------------------*/
+aside {
+  grid-row-end: 5;
+  grid-row-end: span 3;
+  height: auto;
+}
+
+/* ---------------------------------------*/
+.container {
+  /* min of 80% or 1000 pixels */
+  width: min(80%, 62.5rem);
+
+  /* margin: 0 auto; */
+}
+
+body {
+  background-color: brown;
+}

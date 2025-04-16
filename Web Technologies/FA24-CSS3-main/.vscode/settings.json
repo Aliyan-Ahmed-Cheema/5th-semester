@@ -1,0 +1,18 @@
+{
+  "liveServer.settings.port": 5501,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1B73BA",
+    "activityBar.foreground": "#081309",
+    "activityBar.activeBackground": "#eef3ee",
+    "activityBar.inactiveForeground": "#eef3ee",
+
+    "statusBar.background": "#1C88C7",
+    "statusBarItem.hoverForeground": "#081309"
+  },
+  "svg.preview.background": "transparent",
+  "editor.formatOnSave": true
+}

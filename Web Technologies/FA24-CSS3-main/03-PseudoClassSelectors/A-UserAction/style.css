@@ -1,0 +1,63 @@
+/* 
+User action pseudo-classes 
+-------------------------- */
+
+h1:hover {
+  color: blueviolet;
+}
+
+/*
+.button:hover {
+    font-size: 20px;
+}
+button:active {
+  color: aqua;
+}
+*/
+
+.abcButton:hover {
+  font-size: 20px;
+}
+
+.abcButton:hover {
+  font-size: 20px;
+  color: purple;
+}
+
+p:active {
+  color: aqua;
+}
+
+.inputButton:active {
+  color: tomato;
+  font-size: 20px;
+}
+
+/* .inputButton:focus {
+  color: blueviolet;
+  font-size: 20px;
+} */
+
+textarea:focus {
+  color: brown;
+}
+
+/* 
+button:focus {
+    color:  green;
+} */
+
+.abcButton:focus {
+  font-size: 30px;
+  color: green;
+}
+
+.abcButton:active {
+  /* :active MUST come after :focus and :hover to become effective */
+  color: aqua;
+  font-size: 40px;
+}
+
+.userform:focus-visible {
+  color: brown;
+}

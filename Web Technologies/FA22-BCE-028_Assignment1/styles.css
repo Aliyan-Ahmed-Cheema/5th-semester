@@ -1,0 +1,352 @@
+header {
+    background-color: white;
+    border-bottom: 3px solid rgb(171, 164, 164);
+}
+#small-header{
+    background-color: rgb(212, 209, 209);
+    padding-left: 50px;
+
+}
+
+.text-image{
+    position: relative;
+     display: flex; 
+     justify-content: start; 
+     align-items: start; 
+     width: 100%; 
+     max-width: 100%;
+}
+
+.text-only{
+    position: absolute; 
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 30px;
+    
+     
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-family:  sans-serif;
+    font-size: 18px;
+}
+
+.division{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 30px;
+}
+
+.first-para-image{
+    display: flex;
+}
+.para{
+    padding-right:300px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.on-this-page{
+   
+   padding-right: 300px;
+   padding-top: 20px;
+   padding-bottom: 30px;
+   padding-left: 2px;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul li {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+ul li::before {
+    content: none; /* Ensures no default marker */
+}
+
+ul li h5{
+    display: flex;
+    padding:3px
+}
+
+ul h4{
+
+    padding-bottom: 3px;
+}
+
+.second-para{
+    display: flex;
+}
+
+.second-para-text{
+    padding: 20px 10px 20px 0px;
+}
+
+.second-para-image{
+    padding: 10px 30px 10px 10px;
+    
+}
+.third-para,.fourth-para, .fifth-para, .sixth-para, .seventh-para, .eighth-para{
+    padding-bottom: 0px; 
+    
+}
+
+.third-para-image, .fourth-para-image, .fifth-para-image, .sixth-para-image, .seventh-para-image, .eighth-para-image{
+    display: flex;
+    
+
+
+}
+
+.column-to-be{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 50px;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    align-content: center;
+    
+}
+
+
+.column-to-be2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    padding-right: 50px;
+    padding-left: 30px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.second-last-para{
+    display: flex;}
+
+.second-last-para-text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    padding-right: 50px;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.second-last-para-image{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 50px;
+    padding-left: 0px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+
+.network-cloud{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-content: start;
+    padding-right: 400px;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.learn-more{
+    background-color: rgb(212, 209, 209);
+    padding-left: 50px;
+
+}
+
+.first-row, .second-row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+
+}
+
+.first-pic{
+    padding: 55px;
+
+}
+
+.learn-more h1{
+    padding-top: 50px;
+}
+
+.last-class{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.last-class-col-row{
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+    padding: 10px;
+
+}
+
+.contact-us{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:50px;
+    padding:20px;
+    margin-bottom: 2px;
+
+}
+
+.social-icons{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:50px;
+    padding:20px;
+    margin-bottom: 2px;
+}
+
+
+.dropdown-menu {
+    display: none; /* Hide the dropdown menu initially */
+    position: absolute; /* Ensure it overlays other content */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu on hover */
+}
+
+.dropdown {
+    position: relative; /* Position for absolute positioning of the dropdown menu */
+}
+
+.nav-link {
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    #small-header {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .text-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-only {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .para, .on-this-page {
+        padding: 15px;
+    }
+
+    .second-para-image, .third-para-image, .fourth-para-image,
+    .fifth-para-image, .sixth-para-image, .seventh-para-image, .eighth-para-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column-to-be, .column-to-be2 {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .network-cloud {
+        padding: 20px;
+    }
+
+    .first-pic {
+        padding: 20px;
+    }
+
+    .first-row, .second-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-us, .social-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .last-class-col-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .learn-more h1 {
+        text-align: center;
+    }
+
+    .second-last-para-text, .second-last-para-image {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #small-header {
+        padding-left: 30px;
+    }
+
+    .para, .on-this-page {
+        padding-right: 100px;
+        padding-left: 20px;
+    }
+
+    .text-only {
+        padding: 20px;
+    }
+
+    .column-to-be, .column-to-be2 {
+        padding: 75px 30px;
+    }
+
+    .network-cloud {
+        padding: 30px 150px;
+    }
+
+    .first-pic {
+        padding: 40px;
+    }
+
+    .contact-us, .social-icons {
+        flex-direction: row;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+<!-- Sign-up Form Content -->
+<h1 style="text-align: center;">Getting started with us!</h1>
+<p style="text-align: center;">Create an account, it's free.</p>
+
+<form action="/submit-your-form" method="post" style="margin: 0 auto; width: 300px;">
+    <label for="first-name">First Name*</label><br>
+    <input type="text" id="first-name" name="first-name" required><br><br>
+
+    <label for="last-name">Last Name*</label><br>
+    <input type="text" id="last-name" name="last-name" required><br><br>
+
+    <label for="email">Email Address*</label><br>
+    <input type="email" id="email" name="email" required placeholder="Name@company.com"><br><br>
+
+    <label for="password">Password*</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button type="submit" style="display: block; width: 100%;">Sign up</button>
+</form>
+
+<!-- Social Media Signup and Links -->
+<div style="text-align: center; margin-top: 20px;">
+    <button style="width: 300px;">Sign up with Google</button><br><br>
+
+    <p>Already have an account? <a href="/login">Log in here</a></p>
+    <p>By signing up, you agree to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>
+</div>
+
+</body>
+</html>

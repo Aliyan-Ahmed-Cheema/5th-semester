@@ -1,0 +1,115 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tomato;
+}
+
+body > * {
+  border: solid blue 4px;
+  background-color: aliceblue;
+  height: 5rem;
+}
+
+/* ======================================== */
+/* =====  CSS Flex(ible) (Box) Layout  ==== */
+/* ======================================== */
+
+.container {
+  display: flex;
+}
+
+/* ======================================== */
+/* ==========  Grid Layout  =============== */
+/* ======================================== */
+
+.container {
+  display: grid;
+}
+
+/* ------------ grid gap -----------------*/
+.container {
+  display: grid;
+  gap: 5px;
+}
+
+/* ------- grid-template-columns ---------*/
+.container {
+  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 10px 3fr 3fr 2fr 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(100px, 300px));
+}
+
+.container {
+  /* + [Restore Defaults] + */
+  gap: normal;
+  grid-template-columns: none;
+}
+
+/* ------- grid-template-rows ------------*/
+.container {
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 2fr 3fr;
+}
+
+/* + [Restore Defaults] + */
+.container {
+  gap: normal;
+  grid-template-columns: none;
+  grid-template-rows: none;
+}
+
+/* =======================================*/
+/* =======================================*/
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 10px 3fr 3fr 2fr 10px;
+}
+
+/* ---------------------------------------*/
+header,
+footer {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: aquamarine;
+}
+
+/* ---------------------------------------*/
+.featured,
+nav {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: aquamarine;
+}
+
+/* ---------------------------------------*/
+main {
+  grid-column: 2 / 4;
+  background-color: deepskyblue;
+}
+
+/* ---------------------------------------*/
+/* header and nav and main as previous */
+nav,
+.featured {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: chartreuse;
+}
+
+aside {
+  grid-column-start: 4;
+  /* grid-column: 4; */
+  grid-row-start: 2;
+  grid-row-end: 5;
+  /* grid-row-end: span 3; */
+}

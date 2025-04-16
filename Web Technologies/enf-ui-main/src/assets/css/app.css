@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* footer css below */
+
+.footer {
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-template-rows: auto auto;
+    background-color: black;
+    gap: 2rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.insta-logo, .linkedin-logo, .twitter-logo, .facebook-logo {
+    color: black;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer1 {
+    grid-area: 1/1/1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer2 {
+    grid-area: 1/2/1/3;
+}
+
+.footer-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-head {
+    font-weight: 900;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer3 {
+    grid-area: 1/3/1/4;
+}
+
+.footer4 {
+    grid-area: 1/4/1/5;
+}
+
+.rights {
+    grid-area: 2/1/2/5;
+    text-align: center;
+    border-top: 0.1rem solid rgb(255, 255, 255);
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.footer-input-field {
+    padding: 0.8rem;
+    border-radius: 0.1rem;
+    border-style: none;
+}
+
+.footer-button {
+    color: black;
+    padding: 0.8rem;
+    border-radius: 0.1rem;
+    border: 1px solid rgb(58, 167, 31);
+    background-color: #89EA5F;
+}
+@media screen and (max-width: 900px) {
+    .footer-categories{
+        gap: 1rem;
+    }
+    .main-head{
+        padding-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 1rem;
+    }
+    .footer-categories{
+        gap: 1rem;
+    }
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        grid-area: auto;
+        padding-left: 0;
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer1 {
+        order: 1;
+    }
+
+    .footer2 {
+        order: 2;
+    }
+
+    .footer3 {
+        order: 3;
+    }
+
+    .footer4 {
+        order: 4;
+    }
+
+    .rights {
+        grid-area: auto;
+        order: 5;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .product-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,62 @@
+html {
+  height: 100%; /* CHECK:Togather-PC */
+}
+
+body {
+  background-color: grey;
+  height: 100%; /* CHECK:Togather-PC */
+  /* height: 100vh; */
+}
+
+/* ------------------------- */
+.this-div {
+  width: 100%;
+  height: 25%; /* CHECK:Togather-PC */
+  background-color: turquoise;
+}
+
+.divEmpty {
+  background-color: aquamarine;
+}
+
+/* ------------------------- */
+body {
+  width: 100%;
+  /* width: 100vw; */
+}
+
+/* Following CSS Rule is used to avoid scroll due to margin and/or padding because default value of box-sizing property is content-box */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================== */
+
+h1 {
+  display: none;
+}
+
+section .this-div {
+  background-color: tan;
+  height: 25%;
+}
+
+section .divEmpty {
+  background-color: antiquewhite;
+}
+
+section {
+  height: 100%;
+}
+
+/* Show heading and see impact */
+h1 {
+  display: block;
+}
+/* ------------------------- */
+
+/* Uncomment to see impact */
+/* body {
+  height: 200%;
+} */

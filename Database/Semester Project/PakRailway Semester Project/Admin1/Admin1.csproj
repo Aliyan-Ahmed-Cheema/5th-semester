@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{534B0D13-8EFB-479C-B2D8-1DDB674D2525}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Admin1</RootNamespace>
+    <AssemblyName>Admin1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>download %282%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Desktop\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\Desktop\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\..\Desktop\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdate.Designer.cs">
+      <DependentUpon>AdminUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem15DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem15DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StaffTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTask.Designer.cs">
+      <DependentUpon>StaffTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerLogin.Designer.cs">
+      <DependentUpon>PassengerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerFeedback.Designer.cs">
+      <DependentUpon>PassengerFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aregistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aregistration.Designer.cs">
+      <DependentUpon>Aregistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="passengerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passengerUpdate.Designer.cs">
+      <DependentUpon>passengerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregistration.Designer.cs">
+      <DependentUpon>Pregistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrain.Designer.cs">
+      <DependentUpon>AddTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RailwayComplaintSystem7DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RailwayComplaintSystem7DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFeedBack.Designer.cs">
+      <DependentUpon>AdminFeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PHome.Designer.cs">
+      <DependentUpon>PHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookTrain.Designer.cs">
+      <DependentUpon>bookTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingInformation.Designer.cs">
+      <DependentUpon>BookingInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerComplaint.Designer.cs">
+      <DependentUpon>PassengerComplaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SC.Designer.cs">
+      <DependentUpon>SC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeStatus.Designer.cs">
+      <DependentUpon>SeeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffHome.Designer.cs">
+      <DependentUpon>StaffHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stafflogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stafflogin.Designer.cs">
+      <DependentUpon>Stafflogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminUpdate.resx">
+      <DependentUpon>AdminUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffTask.resx">
+      <DependentUpon>StaffTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerLogin.resx">
+      <DependentUpon>PassengerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerFeedback.resx">
+      <DependentUpon>PassengerFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aregistration.resx">
+      <DependentUpon>Aregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passengerUpdate.resx">
+      <DependentUpon>passengerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregistration.resx">
+      <DependentUpon>Pregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrain.resx">
+      <DependentUpon>AddTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFeedBack.resx">
+      <DependentUpon>AdminFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHome.resx">
+      <DependentUpon>PHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookTrain.resx">
+      <DependentUpon>bookTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingInformation.resx">
+      <DependentUpon>BookingInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerComplaint.resx">
+      <DependentUpon>PassengerComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SC.resx">
+      <DependentUpon>SC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffHome.resx">
+      <DependentUpon>StaffHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stafflogin.resx">
+      <DependentUpon>Stafflogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RailwayComplaintSystem15DataSet.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet1.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet1.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet2.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet2.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet3.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet3.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet4.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet4.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet5.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet5.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet6.xsc">
+      <DependentUpon>RailwayComplaintSystem15DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem15DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem15DataSet6.xss">
+      <DependentUpon>RailwayComplaintSystem15DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet1.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet1.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet10.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet10.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet11.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet11.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet12.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet12.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet13.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet13.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet2.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet2.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet3.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet3.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet4.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet4.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet5.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet5.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet6.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet6.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet7.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet7.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet8.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet8.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet9.xsc">
+      <DependentUpon>RailwayComplaintSystem7DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RailwayComplaintSystem7DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RailwayComplaintSystem7DataSet9.xss">
+      <DependentUpon>RailwayComplaintSystem7DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\585e4beacb11b227491c3399.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_circle_icon_137496.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp_Image_2022-12-19_at_01.53.58-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5570173.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55701731.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5570173_1_optimized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="download %282%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

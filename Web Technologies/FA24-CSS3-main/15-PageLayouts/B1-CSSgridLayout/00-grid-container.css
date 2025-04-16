@@ -1,0 +1,104 @@
+/* ======================================== */
+/* ==========  Normal Flow  =============== */
+/* ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tomato;
+}
+
+body > * {
+  border: solid blue 4px;
+  background-color: aliceblue;
+  height: 5rem;
+}
+
+/* ======================================== */
+/* =====  CSS Flex(ible) (Box) Layout  ==== */
+/* ======================================== */
+
+.container {
+  display: flex;
+}
+
+/* ======================================== */
+/* ==========  Grid Layout  =============== */
+/* ======================================== */
+
+.container {
+  display: grid;
+}
+
+/* ------------ grid gap -----------------*/
+.container {
+  display: grid;
+  gap: 5px;
+}
+
+/* + [Restore Defaults] + */
+/* .container {
+  gap: normal;
+} */
+
+/* ------- grid-template-columns ---------*/
+.container {
+  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(100px, 300px));
+  grid-template-columns: 10px 3fr 3fr 2fr 10px;
+  grid-template-columns: min-content 3fr 3fr 2fr min-content;
+  grid-template-columns: max-content 3fr 3fr 2fr max-content;
+  grid-template-columns: auto 3fr auto 2fr auto;
+}
+
+.container {
+  /* + [Restore Defaults] + */
+  grid-template-columns: none;
+}
+
+/* ------- grid-template-rows ------------*/
+.container {
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-rows: 1fr 2fr 3fr auto auto auto;
+}
+
+/* + [Restore Defaults] + */
+.container {
+  grid-template-rows: none;
+}
+
+/* ------- grid-auto-rows ------------*/
+.container {
+  grid-auto-rows: 2fr;
+
+  /* Percentage value relative to the block size of the grid container. */
+  grid-auto-rows: 100%;
+  grid-auto-rows: 25%;
+  grid-auto-rows: 16%;
+
+  grid-auto-rows: 3fr 2fr 1fr;
+  grid-auto-rows: 1fr 2fr 3fr auto auto auto;
+}
+
+/* + [Restore Defaults] + */
+.container {
+  grid-auto-rows: auto;
+}
+
+/* ------- grid-auto-columns ---------*/
+
+.container {
+  grid-auto-columns: max-content;
+  grid-auto-columns: min-content;
+  grid-auto-columns: 50%;
+}
+
+/* + [Restore Defaults] + */
+.container {
+  grid-auto-columns: auto;
+}

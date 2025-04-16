@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="Lab4Task2.css">
+</head>
+<body>
+
+    <div class="cart-container">
+        <header class="header">
+            <h1>Your Shopping Cart</h1>
+        </header>
+
+        <div class="grid-container">
+            <section class="delivery-options">
+                <h2>Select delivery options</h2>
+                <div class="item-details">
+                    <img src="tv-image.jpg" alt="OLED TV" class="product-image">
+                    <div class="product-info">
+                        <p><strong>OLED TV 195 cm (77 Inch) [Model Year 2022]</strong></p>
+                        <p>Condition: 
+                            <label><input type="radio" name="condition" checked> Used</label>
+                            <label><input type="radio" name="condition"> Brand-new</label>
+                        </p>
+                        <p>Unit Price: €2000/-</p>
+                        <label for="quantity">Quantity: 
+                            <select id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <p>Items Cost: €6000</p>
+                <p>Delivery Insurance: €35</p>
+                <p>Delivery Charges: Free for members</p>
+                <p>Total Purchase: €6035</p>
+                <p>VAT: €1146 (included)</p>
+            </section>
+        </div>
+        <br>
+        <hr style="color: red;">
+        <div class="grid-container">
+            <section class="payment-details">
+                <h2>Confirm payment details</h2>
+                <form>
+                    <label for="bic">BIC (Swift-Code):</label>
+                    <input type="text" id="bic" name="bic" required>
+
+                    <label for="iban">IBAN:</label>
+                    <input type="text" id="iban" name="iban" required>
+
+                    <label for="account-name">Account Holder's Name:</label>
+                    <input type="text" id="account-name" name="account-name" required>
+
+                    <label>
+                        <input type="checkbox" name="save-details"> Save my bank details for future purchases?
+                    </label>
+                </form>
+            </section>
+
+            <section class="payment-method">
+                <h2>Choose payment method</h2>
+                <form>
+                    <label><input type="radio" name="payment-method"> Credit Card</label>
+                    <label><input type="radio" name="payment-method"> PayPal</label>
+                    <label><input type="radio" name="payment-method" checked> Personal Bank Account</label>
+                    <label><input type="radio" name="payment-method"> Bank Financing</label>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

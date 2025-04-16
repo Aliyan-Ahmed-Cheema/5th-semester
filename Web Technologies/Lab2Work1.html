@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <!-- Centered Image -->
+    <div style="text-align: center;">
+        <img src="COMSATS.jpg" alt="Company Logo" style="max-width: 200px;">
+    </div>
+
+    <!-- Heading and Sub-heading -->
+    <h1 style="text-align: center;">Job Application Form</h1>
+    <p style="text-align: center;">Please complete the form below to apply for a position with us.</p>
+
+    <form action="/submitApplication" method="post" enctype="multipart/form-data">
+        <!-- Personal Information -->
+
+        <!-- Full Name Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <h3>Full Name</h3>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="middleName" name="middleName" placeholder="Middle Name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div style="display: flex; margin-top: 5px;">
+                <small>First Name</small>
+                <small style="margin-left: 150px;">Middle Name</small>
+                <small style="margin-left: 150px;">Last Name</small>
+            </div>
+
+            <!-- Birth Date Section -->
+            <h3>Birth Date</h3>
+            <div>
+                <select id="birthMonth" name="birthMonth">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <!-- Add other months -->
+                </select>
+                <select id="birthDay" name="birthDay">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Add other days -->
+                </select>
+                <select id="birthYear" name="birthYear">
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <!-- Add other years -->
+                </select>
+            </div>
+            <div style="display: flex; margin-top: 5px;">
+                <small>Month</small>
+                <small style="margin-left: 50px;">Day</small>
+                <small style="margin-left: 40px;">Year</small>
+            </div>
+
+            <!-- Position Applied & Referral Section -->
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <div>
+                    <h3>Position Applied For</h3>
+                    <select id="position" name="position">
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                        <!-- Add other positions -->
+                    </select>
+                </div>
+                <div>
+                    <h3>How Did You Hear About Us?</h3>
+                    <select id="referral" name="referral">
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Indeed">Indeed</option>
+                        <!-- Add other sources -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Available Start Date Section -->
+            <h3 style="margin-top: 20px;">Available Start Date</h3>
+            <input type="date" id="startDate" name="startDate">
+        </fieldset>
+
+        <!-- Address Information -->
+        <fieldset>
+            <legend>Current Address</legend>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street" required><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+
+            <label for="state">State/Province:</label>
+            <input type="text" id="state" name="state" required><br><br>
+
+            <label for="postalCode">Postal/Zip Code:</label>
+            <input type="text" id="postalCode" name="postalCode" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin"><br><br>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+        </fieldset>
+
+        <!-- Cover Letter -->
+        <fieldset>
+            <legend>Cover Letter</legend>
+            <label for="coverLetter">Cover Letter:</label><br>
+            <textarea id="coverLetter" name="coverLetter" rows="6" cols="50" placeholder="Write your cover letter here..."></textarea><br><br>
+        </fieldset>
+
+        <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">Submit Application</button>
+    </form>
+
+</body>
+</html>

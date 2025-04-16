@@ -1,0 +1,32 @@
+/* Simple Selectors */
+h2 {
+  color: chocolate;
+}
+
+/* Compound Selectors */
+li.colorit {
+  color: aquamarine;
+}
+
+.colorit:hover {
+  color: blueviolet;
+}
+
+/* Complex Selectors */
+p span {
+  font-weight: bold;
+}
+
+.colorit ul > li:nth-child(3) {
+  font-size: 20px;
+}
+
+section ~ article p {
+  color: tomato;
+}
+
+/* Group Selectors */
+p,
+h2 {
+  font-size: large;
+}

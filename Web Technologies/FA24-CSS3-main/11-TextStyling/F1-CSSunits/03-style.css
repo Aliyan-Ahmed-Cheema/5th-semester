@@ -1,0 +1,77 @@
+/*  Property value in rem i.e. Root em
+    ==================================
+    -- Effected by browser's appearance settings 
+    -- Relative font size
+    -- Recommended and frequently used by developers
+    -- Relative value directly from root (i.e. <html>): 
+        For font-size property: <n>rem = (root's font-size value) x n
+        For any other property: <n>rem = (root's font-size value) x n
+
+*/
+/* ================================================= */
+
+/* [Default] Default by UA stylesheet */
+/* 
+html {
+    font-size: 16px;
+} 
+
+section {
+    font-size: 1em;
+}
+*/
+/* ----------------------- */
+
+/*  CSS rule recommended with rem units for browser compatibility in font sizes */
+/* body {
+  font-size: 100%;
+} */
+
+.heading1,
+.divheading1,
+.sectionheading1,
+.sectionsubheading1 {
+  color: blueviolet;
+}
+
+/* ----------------------- */
+/* Default by UA stylesheet*/
+/* font-size: 16px; */
+/* vs. */
+/* 62.5% ==> font-size: 10px*/
+/* font-size: 62.5%; */
+
+/* :root { */
+html {
+  font-size: 62.5%;
+}
+
+/*  CSS rule recommended with rem units for browser compatibility in font sizes */
+body {
+  font-size: 100%;
+}
+
+/* 1rem ==> root[font-size] x 1 */
+.p1 {
+  font-size: 1rem;
+}
+
+/* 1.5rem ==> root[font-size] x 1.5 */
+.heading1 {
+  font-size: 1.5rem;
+}
+
+/* 3rem ==> root[font-size] x 3 */
+section {
+  font-size: 3rem;
+}
+
+/* 4rem ==> root[font-size] x 4 */
+.sectionheading1 {
+  font-size: 4rem;
+}
+
+/* 3rem ==> root[font-size] x 3 */
+.sectionsubheading1 {
+  font-size: 3rem;
+}

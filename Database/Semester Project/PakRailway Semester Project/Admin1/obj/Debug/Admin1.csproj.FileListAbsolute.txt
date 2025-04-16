@@ -1,0 +1,58 @@
+C:\Users\Lenovo\source\repos\Admin1\Admin1\bin\Debug\Admin1.exe.config
+C:\Users\Lenovo\source\repos\Admin1\Admin1\bin\Debug\Admin1.exe
+C:\Users\Lenovo\source\repos\Admin1\Admin1\bin\Debug\Admin1.pdb
+C:\Users\Lenovo\source\repos\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form1.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.exe.licenses
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.exe
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.pdb
+C:\Users\Lenovo\source\repos\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form2.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form3.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form4.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form5.resources
+C:\Users\Lenovo\source\repos\Admin1\Admin1\obj\Debug\Admin1.Form6.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Admin1.exe.config
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Admin1.exe
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Admin1.pdb
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.exe.licenses
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.exe
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.pdb
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.PassengerFeedback.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Aregistration.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Pregistration.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.AddTrain.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.AdminFeedBack.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.PHome.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.bookTrain.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.BookingInformation.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.PassengerComplaint.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.PassengerLogin.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.AdminLogin.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.AdminHome.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Stafflogin.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.passengerUpdate.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.SC.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.AdminUpdate.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Splash.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.StaffHome.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.StaffTask.resources
+C:\Users\Lenovo\Desktop\New folder\Admin1\Admin1\obj\Debug\Admin1.Status.resources
